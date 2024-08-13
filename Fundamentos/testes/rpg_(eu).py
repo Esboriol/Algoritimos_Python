@@ -68,7 +68,7 @@ class Player:
         randola = random.randint(1, 4)
         if randola >= 3:
             self.iframe = True
-            print_slow("Você está Invulnerável")
+
         else:
             self.iframe = False
             print_slow("Você não conseguiu defender")
@@ -146,6 +146,8 @@ def fight(player, enemy):
             if player.health <= 0:
                 print_slow("Você foi derrotado!")
                 return False
+
+        player.iframe = False
 
     return True
 
