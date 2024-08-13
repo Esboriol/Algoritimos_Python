@@ -7,17 +7,61 @@ def print_slow(text):
         time.sleep(0.05)
     print()
 
+def potion(player):
+    cura = random.randint(10, 25)
+    player.health += cura
+    print_slow(f"Você curou {cura} de vida")
+
+def generate_item(player):
+    sorte = random.randint(1, 2)
+    if sorte == 1:
+        player.add_item("Potion")
+        print_slow("Você ganhou uma poção")
+    elif sorte == 2:
+        possi = [
+            Weapon("Chicken Knife", 5, 10),
+            Weapon("Stick", 1, 20)
+        ]
+        chosen_weapon = random.choice(possi)
+        player.add_item(chosen_weapon)
+        print_slow(f"Você ganhou {chosen_weapon}")
+
+class Weapon:
+    def __init__(self, name, strenge, speed):
+        self.name = name
+        self.strenge = strenge
+        self.speed = speed
+
+    def __repr__(self):
+        return f"{self.name} (Dano: {self.strenge}, Velocidade: {self.speed})"
+
 class Player:
     def __init__(self):
         self.health = 100
         self.strenge = 10
+        self.weapon = None
         self.speed = 20
         self.inventory = []
         self.experience = 0
         self.lvl = 1
         self.iframe = False
 
+
+    def add_item(self, item):
+        self.inventory.append(item)
+
+    def equip_weapon(self, weapon):
+        if isinstance(weapon, Weapon):
+            self.weapon = weapon
+            self.strenge = weapon.strenge
+            self.speed = weapon.speed
+            print_slow(f"Você equipou a arma: {weapon.name}")
+        else:
+            print_slow("Item não é uma arma")
+
     def attack(self):
+        if self.weapon:
+            return random.randint(1, self.weapon.strenge)
         return random.randint(1, self.strenge)
 
     def defense(self):
@@ -73,6 +117,10 @@ def fight(player, enemy):
             if enemy.health <= 0:
                 player.gain_experience(50)
                 print_slow(f"Você derrotou o {enemy.name}!")
+
+                if random.random() < 1.0:
+                    generate_item(player)
+
                 return True
         elif escolha == "2":
             player.defense()
@@ -108,8 +156,6 @@ def explorar(player):
         "Um castelo antigo."
     ]
     encounters = [
-        Enemy("Goblin", 30, 10, 3),
-        Enemy("Troll", 60, 4, 12),
         Enemy("Sans", 1, 1, 1)
     ]
     print_slow("Você está explorando o mundo...")
@@ -128,8 +174,23 @@ def explorar(player):
 def mostrar_inventario(player):
     if player.inventory:
         print_slow("Seu inventário: ")
-        for item in player.inventory:
-            print_slow(f"- {item}")
+        for index, item in enumerate(player.inventory, 1):
+            print(f"{index}. {item}")
+        escolha = input("Você quer usar algum item (S/N): ")
+        if escolha.upper() == "S":
+            item_index = int(input("Digite o número do item: ")) - 1
+            if 0 <= item_index < len(player.inventory):
+                item = player.inventory[item_index]
+                if item == "Potion":
+                    potion(player)
+                    player.inventory.remove("Potion")
+                elif isinstance(item, Weapon):
+                    player.equip_weapon(item)
+                    player.inventory.remove(item)
+            else:
+                print_slow("Número de item inválido")
+        elif escolha.upper() == "N":
+            print_slow("Ok, voltando")
     else:
         print_slow("Seu inventário está vazio")
 
@@ -151,7 +212,8 @@ def main():
         elif escolher == "2":
             mostrar_inventario(player)
         elif escolher == "3":
-            print_slow(f"Saúde atual: {player.health} e nível {player.lvl}")
+            weapon_info = f"{player.weapon}" if player.weapon else "Nenhuma arma equipada"
+            print_slow(f"Saúde atual: {player.health}, Arma: {weapon_info}, Nível: {player.lvl}")
         elif escolher == "4":
             print_slow("Saindo do jogo")
             break
