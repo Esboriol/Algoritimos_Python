@@ -19,8 +19,8 @@ def generate_item(player):
         print_slow("Você ganhou uma poção")
     elif sorte == 2:
         possi = [
-            Weapon("Chicken Knife", 5, 10),
-            Weapon("Stick", 1, 20)
+            Weapon("Chicken Knife", 15, 10),
+            Weapon("Stick", 5, 20)
         ]
         chosen_weapon = random.choice(possi)
         player.add_item(chosen_weapon)
@@ -46,29 +46,28 @@ class Player:
         self.lvl = 1
         self.iframe = False
 
-
     def add_item(self, item):
         self.inventory.append(item)
 
     def equip_weapon(self, weapon):
         if isinstance(weapon, Weapon):
             self.weapon = weapon
-            self.strenge = weapon.strenge
-            self.speed = weapon.speed
+            self.strenge += weapon.strenge
+            self.speed += weapon.speed
             print_slow(f"Você equipou a arma: {weapon.name}")
         else:
             print_slow("Item não é uma arma")
 
     def attack(self):
+        max_damage = self.strenge
         if self.weapon:
-            return random.randint(1, self.weapon.strenge)
-        return random.randint(1, self.strenge)
+            max_damage += self.weapon.strenge
+        return random.randint(1, max_damage)
 
     def defense(self):
         randola = random.randint(1, 4)
         if randola >= 3:
             self.iframe = True
-
         else:
             self.iframe = False
             print_slow("Você não conseguiu defender")
@@ -118,7 +117,7 @@ def fight(player, enemy):
                 player.gain_experience(50)
                 print_slow(f"Você derrotou o {enemy.name}!")
 
-                if random.random() < 1.0:
+                if random.random() < 0.2:
                     generate_item(player)
 
                 return True
@@ -158,7 +157,15 @@ def explorar(player):
         "Um castelo antigo."
     ]
     encounters = [
-        Enemy("Sans", 1, 1, 1)
+        Enemy("Sans", 1, 1, 1),
+        Enemy("Goblin", 15, 40, 10),
+        Enemy("Orc", 30, 10, 25)
+    ]
+    encounters2 = [
+        Enemy("Sans", 1, 1, 1),
+        Enemy("Goblin carioca", 30, 40, 15),
+        Enemy("Lider Orc", 60, 15, 40),
+        Enemy("Dragão", 100, 30, 65)
     ]
     print_slow("Você está explorando o mundo...")
     location = random.choice(locations)
@@ -166,7 +173,10 @@ def explorar(player):
 
     # Chance de encontro: 70% monstro, 30% cura
     if random.random() < 0.7:
-        enemy = random.choice(encounters)
+        if player.lvl <= 1:
+            enemy = random.choice(encounters)
+        elif player.lvl >= 2:
+            enemy = random.choice(encounters2)
         return fight(player, enemy)
     else:
         print_slow("Você encontrou uma fonte de cura")
