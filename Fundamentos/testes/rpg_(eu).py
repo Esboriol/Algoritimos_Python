@@ -162,7 +162,7 @@ def explorar(player):
         Enemy("Orc", 30, 10, 25)
     ]
     encounters2 = [
-        Enemy("Sans", 1, 1, 1),
+        Enemy("Dust", 90, 20, 15),
         Enemy("Goblin carioca", 30, 40, 15),
         Enemy("Lider Orc", 60, 15, 40),
         Enemy("Dragão", 100, 30, 65)
@@ -175,7 +175,7 @@ def explorar(player):
     if random.random() < 0.7:
         if player.lvl <= 1:
             enemy = random.choice(encounters)
-        elif player.lvl >= 2:
+        elif player.lvl >= 7:
             enemy = random.choice(encounters2)
         return fight(player, enemy)
     else:
