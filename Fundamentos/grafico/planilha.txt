@@ -2,6 +2,6 @@ Categoria,Valor
 Alimentação,450
 Transporte,200
 Lazer,150
-Nsei,100
-Panelas,50
+Apm,100
+Internet,50
 Outros,50
