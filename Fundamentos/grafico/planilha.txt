@@ -1,7 +1,7 @@
 Categoria,Valor
 Alimentação,450
 Transporte,200
+internet,185
 Lazer,150
 Apm,100
-Internet,50
 Outros,50
