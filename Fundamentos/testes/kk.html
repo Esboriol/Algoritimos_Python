@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensagem no WhatsApp</title>
+</head>
+<body>
+    <h1>Enviar Mensagem no WhatsApp</h1>
+    <form id="whatsappForm">
+        <label for="phoneNumber">551998141-8757:</label>
+        <input type="text" id="phoneNumber" placeholder="5511999999999" required>
+        <br>
+        <label for="message">Mensagem:</label>
+        <input type="text" id="message" placeholder="Olá, tudo bem?" required>
+        <br>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            // Obtém os valores dos campos do formulário
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var message = document.getElementById('message').value;
+
+            // Codifica a mensagem para que possa ser usada em uma URL
+            var encodedMessage = encodeURIComponent(message);
+
+            // Constrói o URL para o WhatsApp Web
+            var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Abre o URL em uma nova aba
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>

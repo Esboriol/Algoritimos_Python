@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b34b7245-34a8-4cd1-bb9c-9b38b857a305" name="Changes" comment="Programações chatas e normais">
+    <list default="true" id="b34b7245-34a8-4cd1-bb9c-9b38b857a305" name="Changes" comment="legal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testes/rpg_(eu).py" beforeDir="false" afterPath="$PROJECT_DIR$/testes/rpg_(eu).py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +36,27 @@
     "Python.aposta.executor": "Run",
     "Python.area.executor": "Run",
     "Python.aumento.executor": "Run",
+    "Python.banho.executor": "Run",
     "Python.caixa_eletronico.executor": "Run",
     "Python.casa.executor": "Run",
     "Python.distancia.executor": "Run",
     "Python.financiamento.executor": "Run",
     "Python.nota.executor": "Run",
+    "Python.pares.executor": "Run",
+    "Python.poupanca.executor": "Run",
     "Python.rpg_(eu).executor": "Run",
+    "Python.senha.executor": "Run",
+    "Python.soma_numeros.executor": "Run",
+    "Python.sorvete.executor": "Run",
     "Python.space(chatgpt).executor": "Run",
     "Python.supermercado.executor": "Run",
+    "Python.tabuada.executor": "Run",
+    "Python.web.executor": "Run",
+    "Python.web_url.executor": "Run",
+    "Python.zap.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/2_DEV/Desktop/Projetos_Python"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,8 +87,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="web" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Fundamentos" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testes/web.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.web" />
         <item itemvalue="Python.rpg_(eu)" />
       </list>
     </recent_temporary>
@@ -131,12 +164,54 @@
       <option name="project" value="LOCAL" />
       <updated>1724170850201</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Provavelmente a ultima verção (ou ate eu ter vontade de continuar com o projeto)">
+      <option name="closed" value="true" />
+      <created>1724179605582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724179605582</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Provavelmente a ultima verção (ou ate eu ter vontade de continuar com o projeto)">
+      <option name="closed" value="true" />
+      <created>1724759961670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724759961670</updated>
+    </task>
+    <task id="LOCAL-00007" summary="legal">
+      <option name="closed" value="true" />
+      <created>1724759983888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724759983888</updated>
+    </task>
+    <task id="LOCAL-00008" summary="legal">
+      <option name="closed" value="true" />
+      <created>1724761792173</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724761792173</updated>
+    </task>
+    <task id="LOCAL-00009" summary="legal">
+      <option name="closed" value="true" />
+      <created>1724762467710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724762467710</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Versão final (por enquanto)" />
     <MESSAGE value="Programações chatas e normais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Programações chatas e normais" />
+    <MESSAGE value="Provavelmente a ultima verção (ou ate eu ter vontade de continuar com o projeto)" />
+    <MESSAGE value="legal" />
+    <option name="LAST_COMMIT_MESSAGE" value="legal" />
   </component>
 </project>
