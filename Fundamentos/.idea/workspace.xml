@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b34b7245-34a8-4cd1-bb9c-9b38b857a305" name="Changes" comment="legal">
-      <change afterPath="$PROJECT_DIR$/testes/joges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testes/imagem/coracao.png" beforeDir="false" />
-    </list>
+    <list default="true" id="b34b7245-34a8-4cd1-bb9c-9b38b857a305" name="Changes" comment="legal" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,37 +28,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Calculadora.executor": "Run",
-    "Python.aposta.executor": "Run",
-    "Python.area.executor": "Run",
-    "Python.aumento.executor": "Run",
-    "Python.banho.executor": "Run",
-    "Python.caixa_eletronico.executor": "Run",
-    "Python.casa.executor": "Run",
-    "Python.daw.executor": "Run",
-    "Python.distancia.executor": "Run",
-    "Python.financiamento.executor": "Run",
-    "Python.joges.executor": "Run",
-    "Python.nota.executor": "Run",
-    "Python.pares.executor": "Run",
-    "Python.poupanca.executor": "Run",
-    "Python.rpg_(eu).executor": "Run",
-    "Python.senha.executor": "Run",
-    "Python.soma_numeros.executor": "Run",
-    "Python.sorvete.executor": "Run",
-    "Python.space(chatgpt).executor": "Run",
-    "Python.supermercado.executor": "Run",
-    "Python.tabuada.executor": "Run",
-    "Python.web.executor": "Run",
-    "Python.web_url.executor": "Run",
-    "Python.zap.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/2_DEV/Desktop/Algoritmos_Html/Aula2108"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Calculadora.executor&quot;: &quot;Run&quot;,
+    &quot;Python.aposta.executor&quot;: &quot;Run&quot;,
+    &quot;Python.area.executor&quot;: &quot;Run&quot;,
+    &quot;Python.aumento.executor&quot;: &quot;Run&quot;,
+    &quot;Python.banho.executor&quot;: &quot;Run&quot;,
+    &quot;Python.caixa_eletronico.executor&quot;: &quot;Run&quot;,
+    &quot;Python.casa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.daw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.distancia.executor&quot;: &quot;Run&quot;,
+    &quot;Python.financiamento.executor&quot;: &quot;Run&quot;,
+    &quot;Python.joges.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nota.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pares.executor&quot;: &quot;Run&quot;,
+    &quot;Python.poupanca.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rpg_(eu).executor&quot;: &quot;Run&quot;,
+    &quot;Python.senha.executor&quot;: &quot;Run&quot;,
+    &quot;Python.soma_numeros.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sorvete.executor&quot;: &quot;Run&quot;,
+    &quot;Python.space(chatgpt).executor&quot;: &quot;Run&quot;,
+    &quot;Python.supermercado.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tabuada.executor&quot;: &quot;Run&quot;,
+    &quot;Python.web.executor&quot;: &quot;Run&quot;,
+    &quot;Python.web_url.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zap.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/2_DEV/Desktop/Algoritmos_Html/Aula2108&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos\testes\imagem" />

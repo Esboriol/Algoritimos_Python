@@ -1,3 +1,4 @@
+import random
 import pygame
 import sys
 
@@ -20,13 +21,16 @@ class Personagem:
         self.image = pygame.transform.scale(self.image, (self.largura, self.altura))
         self.x = 400
         self.y = 300
-        self.vida = 3  # Vida inicial do jogador
+        self.vida = 5  # Vida inicial do jogador ajustada para 5
+        self.tiro = "Normal"
+        self.ultimo_tiro_normal = 0  # Tempo do último tiro normal
+        self.ultimo_tiro_power = 0  # Tempo do último tiro power
 
     def draw(self):
         tela.blit(self.image, (self.x, self.y))
 
-    def take_damage(self):
-        self.vida -= 1
+    def take_damage(self, damage):
+        self.vida -= damage
         if self.vida <= 0:
             self.die()
 
@@ -35,25 +39,55 @@ class Personagem:
         pygame.quit()
         sys.exit()
 
+    def change_shooting_type(self, new_type):
+        self.tiro = new_type
+        print(f"Tipo de tiro alterado para: {self.tiro}")
+
+    def shoot(self):
+        tempo = pygame.time.get_ticks()
+        if self.tiro == "Normal":
+            # Ajustar cooldown para tiro normal
+            if tempo - self.ultimo_tiro_normal >= 250:  # Cooldown de 250ms (0.25 segundos)
+                self.ultimo_tiro_normal = tempo
+                return Projetil(self.x + self.largura // 2, self.y)
+        elif self.tiro == "Power":
+            # Ajustar cooldown para tiro power
+            if tempo - self.ultimo_tiro_power >= 300:  # Cooldown de 300ms (0.3 segundos)
+                self.ultimo_tiro_power = tempo
+                projectiles.append(Projetil(self.x + self.largura // 2 - 20, self.y))
+                projectiles.append(Projetil(self.x + self.largura // 2 + 20, self.y))
+                return None
+
 personagem = Personagem()
 
 # Classe Projetil
 class Projetil:
-    def __init__(self, x, y):
+    def __init__(self, x, y, target_x=None, target_y=None):
         self.x = x
         self.y = y
         self.vel = 10
         self.radius = 5
 
+        if target_x is not None and target_y is not None:
+            self.dx = target_x - x
+            self.dy = target_y - y
+            self.length = (self.dx ** 2 + self.dy ** 2) ** 0.5
+            self.dx /= self.length
+            self.dy /= self.length
+        else:
+            self.dx = 0
+            self.dy = -1
+
     def move(self):
-        self.y -= self.vel
+        self.x += self.dx * self.vel
+        self.y += self.dy * self.vel
 
     def draw(self):
-        pygame.draw.circle(tela, (255, 255, 0), (self.x, self.y), self.radius)
+        pygame.draw.circle(tela, (255, 255, 0), (int(self.x), int(self.y)), self.radius)
 
-    def collides_with(self, inimigo):
-        distance = ((self.x - (inimigo.x + inimigo.largura // 2)) ** 2 + (self.y - (inimigo.y + inimigo.altura // 2)) ** 2) ** 0.5
-        return distance < self.radius + (inimigo.largura // 2)
+    def collides_with(self, obj):
+        distance = ((self.x - (obj.x + obj.largura // 2)) ** 2 + (self.y - (obj.y + obj.altura // 2)) ** 2) ** 0.5
+        return distance < self.radius + (obj.largura // 2)
 
 projectiles = []
 
@@ -75,6 +109,26 @@ class Bala:
         distance = ((self.x - (personagem.x + personagem.largura // 2)) ** 2 + (self.y - (personagem.y + personagem.altura // 2)) ** 2) ** 0.5
         return distance < self.radius + (personagem.largura // 2)
 
+# Classe Drop
+class Drop:
+    def __init__(self, x, y, tipo):
+        self.x = x
+        self.y = y
+        self.tipo = tipo
+        self.radius = 10
+        self.vel = 2  # Velocidade de descida
+
+    def move(self):
+        self.y += self.vel
+
+    def draw(self):
+        cor = (0, 255, 0) if self.tipo == "Power" else (0, 0, 255)
+        pygame.draw.circle(tela, cor, (self.x, self.y), self.radius)
+
+    def collides_with(self, personagem):
+        distance = ((self.x - (personagem.x + personagem.largura // 2)) ** 2 + (self.y - (personagem.y + personagem.altura // 2)) ** 2) ** 0.5
+        return distance < self.radius + (personagem.largura // 2)
+
 # Classe Inimigo
 class Inimigo:
     def __init__(self, x, y):
@@ -88,6 +142,7 @@ class Inimigo:
         self.life = 3
         self.time = pygame.time.get_ticks()
         self.active = True
+        self.dano = 0.5  # Dano causado pelos inimigos
 
     def move(self):
         if self.active:
@@ -115,6 +170,11 @@ class Inimigo:
     def die(self):
         self.active = False
 
+        # Adiciona um drop ao morrer
+        if random.random() < 0.3:  # Ajustado para uma probabilidade de 30%
+            drop_type = "Power" if random.random() < 0.5 else "Speed"
+            drops.append(Drop(self.x + self.largura // 2, self.y + self.altura, drop_type))
+
 # Classe de Gerenciamento de Ondas
 class WaveManager:
     def __init__(self):
@@ -136,7 +196,6 @@ class WaveManager:
             self.current_wave += 1
 
     def update(self):
-        # Atualiza os inimigos e verifica se todas as ondas foram completadas
         if not self.enemies and self.current_wave < len(self.waves):
             self.spawn_wave()
         for enemy in self.enemies:
@@ -149,8 +208,9 @@ class WaveManager:
         for enemy in self.enemies:
             enemy.draw()
 
-# Inicializa o gerenciador de ondas
+# Inicializa o gerenciador de ondas e lista de drops
 wave_manager = WaveManager()
+drops = []
 
 # Configura o relógio para controlar o FPS
 clock = pygame.time.Clock()
@@ -182,14 +242,15 @@ while True:
 
     tempo = pygame.time.get_ticks()
     if tecla[pygame.K_x]:
-        if tempo - ultimo_tiro >= 100:
-            projectiles.append(Projetil(personagem.x + personagem.largura // 2, personagem.y))
-            ultimo_tiro = tempo
+        proj = personagem.shoot()
+        if proj:
+            projectiles.append(proj)
+        ultimo_tiro = tempo
 
     # Atualiza e desenha os projéteis
     for proj in projectiles[:]:
         proj.move()
-        if proj.y < 0:
+        if proj.y < 0 or proj.y > 600 or proj.x < 0 or proj.x > 800:
             projectiles.remove(proj)
         elif isinstance(proj, Projetil):
             for enemy in wave_manager.enemies:
@@ -205,11 +266,19 @@ while True:
             projectiles.remove(bala)
         elif bala.collides_with(personagem):
             projectiles.remove(bala)
-            personagem.take_damage()
+            personagem.take_damage(0.5)  # Aplicando dano de 0.5
 
     # Atualiza e desenha a onda de inimigos
     wave_manager.update()
     wave_manager.draw()
+
+    # Atualiza e desenha os drops
+    for drop in drops[:]:
+        drop.move()  # Move o drop para baixo
+        drop.draw()
+        if drop.collides_with(personagem):
+            personagem.change_shooting_type(drop.tipo)
+            drops.remove(drop)
 
     # Desenha a imagem do personagem na tela
     personagem.draw()
