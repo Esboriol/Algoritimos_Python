@@ -1,5 +1,5 @@
-Categoria,Valor(Televisão),Valor(Notebooks),Valor(Smartphones)
-Semana1,50,30,80
-Semana2,60,25,75
-Semana3,55,40,85
-Semana4,70,35,90
+Categoria,Valor(Televisão),Valor(Notebooks),Valor(Smartphones),Valor(Total)
+Semana1,50,30,80,160
+Semana2,60,25,75,160
+Semana3,55,40,85,180
+Semana4,70,35,90,195
