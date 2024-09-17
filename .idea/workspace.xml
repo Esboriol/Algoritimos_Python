@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Algoritimos_Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Algoritimos_Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fundamentos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fundamentos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fundamentos/Decisão/banho.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundamentos/Decisão/banho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fundamentos/testes/joges.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundamentos/testes/joges.py" afterDir="false" />
+    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="legal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +33,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.IMC.executor": "Run",
+    "Python.McDonalds(toten).executor": "Run",
     "Python.banho.executor": "Run",
     "Python.calculadora.executor": "Run",
     "Python.financeiro.executor": "Run",
@@ -66,6 +62,19 @@
       <option name="presentableId" value="Default" />
       <updated>1725965592145</updated>
     </task>
+    <task id="LOCAL-00001" summary="legal">
+      <option name="closed" value="true" />
+      <created>1725984977626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725984977626</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="legal" />
+    <option name="LAST_COMMIT_MESSAGE" value="legal" />
   </component>
 </project>
