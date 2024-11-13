@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="legal" />
+    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="Finalizado (eu acho :D)">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -30,13 +34,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.Dados_pessoais.executor": "Run",
     "Python.IMC.executor": "Run",
     "Python.McDonalds(toten).executor": "Debug",
+    "Python.atividade2.executor": "Run",
     "Python.banho.executor": "Run",
     "Python.calculadora.executor": "Run",
+    "Python.contagem.executor": "Run",
+    "Python.exemplo.executor": "Run",
+    "Python.exemplo1.executor": "Run",
+    "Python.exemplo2.executor": "Run",
     "Python.financeiro.executor": "Run",
+    "Python.financiamento.executor": "Run",
     "Python.investimento.executor": "Run",
     "Python.joges.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.media.executor": "Run",
+    "Python.pix.executor": "Run",
     "Python.regressiva.executor": "Run",
     "Python.temperatura.executor": "Run",
     "Python.vogals.executor": "Run",
@@ -44,6 +59,12 @@
     "git-widget-placeholder": "main"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos\IA\static\js" />
+      <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,11 +97,29 @@
       <option name="project" value="LOCAL" />
       <updated>1726580736914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1726581192983</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726581192983</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finalizado (eu acho :D)">
+      <option name="closed" value="true" />
+      <created>1728397508503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728397508503</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="legal" />
-    <option name="LAST_COMMIT_MESSAGE" value="legal" />
+    <MESSAGE value="." />
+    <MESSAGE value="Finalizado (eu acho :D)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizado (eu acho :D)" />
   </component>
 </project>
