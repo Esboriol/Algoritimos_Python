@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="Aquecimento">
+    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="Atividade Avaliativa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,7 @@
     "Python.IMC.executor": "Run",
     "Python.McDonalds(toten).executor": "Debug",
     "Python.atividade2.executor": "Run",
+    "Python.banco.executor": "Run",
     "Python.banho.executor": "Run",
     "Python.calculadora.executor": "Run",
     "Python.contagem.executor": "Run",
@@ -131,15 +132,32 @@
       <option name="project" value="LOCAL" />
       <updated>1733233926571</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=".">
+      <option name="closed" value="true" />
+      <created>1733235111651</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733235111651</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Atividade Avaliativa">
+      <option name="closed" value="true" />
+      <created>1733250796058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733250796058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="legal" />
-    <MESSAGE value="." />
     <MESSAGE value="Finalizado (eu acho :D)" />
     <MESSAGE value="Atividades" />
     <MESSAGE value="Aquecimento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aquecimento" />
+    <MESSAGE value="." />
+    <MESSAGE value="Atividade Avaliativa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atividade Avaliativa" />
   </component>
 </project>
