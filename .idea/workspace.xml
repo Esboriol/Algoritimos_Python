@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="Finalizado (eu acho :D)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2f8c88aa-4e36-45e6-9340-3ac5fbca4fba" name="Changes" comment="Aquecimento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,10 +46,12 @@
     "Python.exemplo2.executor": "Run",
     "Python.financeiro.executor": "Run",
     "Python.financiamento.executor": "Run",
+    "Python.ifood.executor": "Run",
     "Python.investimento.executor": "Run",
     "Python.joges.executor": "Run",
     "Python.main.executor": "Run",
     "Python.media.executor": "Run",
+    "Python.papelaria.executor": "Run",
     "Python.pix.executor": "Run",
     "Python.regressiva.executor": "Run",
     "Python.temperatura.executor": "Run",
@@ -61,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos\testes" />
       <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos\IA\static\js" />
       <recent name="C:\Users\2_DEV\Desktop\Algoritimos_Python\Fundamentos" />
     </key>
@@ -113,13 +115,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728397508503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Atividades">
+      <option name="closed" value="true" />
+      <created>1731514762116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731514762116</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aquecimento">
+      <option name="closed" value="true" />
+      <created>1733233926555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733233926571</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="legal" />
     <MESSAGE value="." />
     <MESSAGE value="Finalizado (eu acho :D)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalizado (eu acho :D)" />
+    <MESSAGE value="Atividades" />
+    <MESSAGE value="Aquecimento" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aquecimento" />
   </component>
 </project>
